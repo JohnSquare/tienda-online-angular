@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { TablaProductosComponent } from './tabla-productos/tabla-productos.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormularioComponent,
+    TablaProductosComponent
   ],
   imports: [
     BrowserModule,
