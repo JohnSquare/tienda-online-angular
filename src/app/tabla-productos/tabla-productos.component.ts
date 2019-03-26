@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PRODUCTOS } from '../mock-producto';
 
 @Component({
   selector: 'app-tabla-productos',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabla-productos.component.css']
 })
 export class TablaProductosComponent implements OnInit {
-
+  productos = PRODUCTOS
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

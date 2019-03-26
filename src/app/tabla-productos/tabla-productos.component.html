@@ -7,11 +7,11 @@
         <td class="celda">Precio</td>      
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tbody>      
+      <tr *ngFor="let producto of productos">
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.descripcion}}</td>
+        <td>{{producto.precio}}</td>
         <td><a href="#">EDITAR</a> / <a href="#">BORRAR</a></td>
       </tr>
     </tbody>
