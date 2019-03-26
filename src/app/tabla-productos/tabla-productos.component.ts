@@ -1,17 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { PRODUCTOS } from '../mock-producto';
+import { ProductosService } from '../productos.service'
+import { Producto } from '../producto';
+//import { Producto } from '../producto';
+
+
+//Esta importación ya no es necesaria porque empezamos a usar un servicio.
+//import { PRODUCTOS } from '../mock-producto';
 
 @Component({
   selector: 'app-tabla-productos',
   templateUrl: './tabla-productos.component.html',
   styleUrls: ['./tabla-productos.component.css']
 })
+
 export class TablaProductosComponent implements OnInit {
-  productos = PRODUCTOS
-  constructor() { }
-
+   
+  constructor(private productoService: ProductosService) { }
+  producto: Producto[];
   ngOnInit() {
-
+    this.producto
+  }
+  getProductos():void{
+    this.producto = this.productoService.getProducto();
   }
 
 }
