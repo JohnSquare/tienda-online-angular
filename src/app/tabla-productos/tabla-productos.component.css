@@ -1,0 +1,15 @@
+table{
+    padding:2em;
+}
+td{
+    padding: 10px;
+    border: 0.5em solid slateblue;
+}
+.add{
+    float: right; 
+    padding: 10px;
+    border: 0.5em solid slateblue;
+}
+.none{
+    border: none;
+}
