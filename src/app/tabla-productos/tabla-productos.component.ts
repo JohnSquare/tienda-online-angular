@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductosService } from '../productos.service'
 import { Producto } from '../producto';
-//import { Producto } from '../producto';
 
 
 //Esta importación ya no es necesaria porque empezamos a usar un servicio.
@@ -18,7 +17,7 @@ export class TablaProductosComponent implements OnInit {
   constructor(private productoService: ProductosService) { }
   producto: Producto[];
   ngOnInit() {
-    this.producto
+    this.getProductos();
   }
   getProductos():void{
     this.producto = this.productoService.getProducto();
