@@ -7,9 +7,9 @@ import { PRODUCTOS } from './mock-producto';
   providedIn: 'root'
 })
 export class ProductosService {
-
+  
   constructor() { }
-  getProducto():Producto[]{
+  getProducto():Producto[]{    
     return PRODUCTOS;
   }
 }

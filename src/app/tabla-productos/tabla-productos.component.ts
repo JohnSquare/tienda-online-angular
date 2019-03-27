@@ -16,10 +16,11 @@ export class TablaProductosComponent implements OnInit {
    
   constructor(private productoService: ProductosService) { }
   producto: Producto[];
-  ngOnInit() {
+  ngOnInit() {    
     this.getProductos();
   }
   getProductos():void{
+    //console.log(this.productoService.getProducto())    
     this.producto = this.productoService.getProducto();
   }
 
