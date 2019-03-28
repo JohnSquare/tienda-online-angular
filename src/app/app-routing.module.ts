@@ -4,9 +4,11 @@ import { TablaProductosComponent } from './tabla-productos/tabla-productos.compo
 import { FormularioComponent } from './formulario/formulario.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/tabla-productos', pathMatch: 'full' },
+  { path: '', redirectTo: 'tabla-productos', pathMatch: 'full' },
   { path: 'tabla-productos', component: TablaProductosComponent }, 
-  { path: 'formulario', component: FormularioComponent }  
+  { path: 'formulario', component: FormularioComponent },
+  { path: 'editar/:id', component: FormularioComponent }
+  
 ];
 
 @NgModule({

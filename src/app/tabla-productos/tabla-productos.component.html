@@ -12,7 +12,7 @@
         <td>{{producto.nombre}}</td>
         <td>{{producto.descripcion}}</td>
         <td>{{producto.precio}}</td>
-        <td><a href="/formulario">EDITAR</a> / <a href="/formulario">BORRAR</a></td>
+        <td><a [routerLink]="['/editar', producto.id]">EDITAR</a> / <a href="/formulario">BORRAR</a></td>
       </tr>
     </tbody>
     <tfoot>
