@@ -14,14 +14,12 @@ import { Producto } from '../producto';
 
 export class TablaProductosComponent implements OnInit {
    
-  constructor(private productoService: ProductosService) { }
+  constructor(private productosService: ProductosService) { }
   producto: Producto[];
   ngOnInit() {    
-    this.getProductos();
-  }
-  getProductos():void{
-    //console.log(this.productoService.getProducto())    
-    this.producto = this.productoService.getProducto();
+    this.productosService.getProductos().subscribe(
+      (productos: Producto[]) => this.producto = productos
+    );
   }
 
 }
