@@ -1,12 +1,15 @@
-<div id="formulario">
-  <p>Nombre: <input type="text" placeholder="Escribe tu nombre" /></p> 
-  <p>Descripción: <input type="text" placeholder="Escribe una breve descripción" /></p>
-  <p>Precio: <input type="text" placeholder="€" /></p>
-  <br />
-  <nav>
-    <!--routerlink redirecciona al componente-->
-    <a routerLink="/tabla-productos">ACEPTAR</a>
-  </nav>  
+<div *ngIf="producto.id !== -1">
+  <div id="formulario">
+    <p><label for="id">Id=>{{producto.d}}</label><input [(ngModel)]="producto.id" id="id" type="text" readonly/></p>
+    <p>Nombre: <input [(ngModel)]="producto.nombre" type="text" placeholder="Escribe tu nombre" /></p> 
+    <p>Descripción: <input [(ngModel)]="producto.descripcion" type="text" placeholder="Escribe una breve descripción" /></p>
+    <p>Precio: <input [(ngModel)]="producto.precio" type="text" placeholder="€" /></p>
+    <br />
+    <nav>
+      <!--routerlink redirecciona al componente-->
+      <a (click)="guardarProducto()" routerLink="/tabla-productos">ACEPTAR</a>
+    </nav>  
+  </div>
 </div>
 <!--Routeroulet sustituye la propia etiqueta por el componente-->
 <!--<router-outlet></router-outlet>-->
